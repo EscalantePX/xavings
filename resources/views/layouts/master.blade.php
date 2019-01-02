@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="fas fa-book"></i>
               <p>
                 Operations
                 <i class="right fa fa-angle-left"></i>
