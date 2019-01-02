@@ -88,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" class="nav-link active">
-                  <i class="far fa-money-bill-alt"></i>
+                  <i class="fas fa-comment-dollar"></i>
                   <p>Earnings</p>
                 </a>
               </li>
