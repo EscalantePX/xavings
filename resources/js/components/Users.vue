@@ -99,6 +99,7 @@
     export default {
         data(){
             return {
+                users: {},
         	    form: new Form({
             		name: '',
             		email: '',
@@ -110,12 +111,15 @@
             }
         },
         methods: {
+            loadUsers(){
+                axios.get('api/user').then(({data}) => (this.users = data));
+            },
             createUser(){
                 this.form.post('api/user');
             }
         },
-        mounted() {
-            console.log('Users Component mounted.')        
+        creater() {
+            this.loadUsers();
         }
     }
 </script>
