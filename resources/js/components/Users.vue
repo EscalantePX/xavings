@@ -15,23 +15,27 @@
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover">
-                  <tbody><tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Type</th>
-                    <th>Modify</th>
-                  </tr>
-                  <tr>
-                    <td>183</td>
-                    <td>John Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-success">Approved</span></td>
-                    <td>
-			<a href="#"> <i class="fa fa-edit text-blue"></i> </a>
-			<a href="#"> <i class="fa fa-trash text-red"></i> </a>
-		    </td>
-                  </tr>
+                  <tbody>
+
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Modify</th>
+                      </tr>
+                      
+                      <tr v-for="user in users" :key="user.id">
+                        <td>{{ user.id }}   </td>
+                        <td>{{ user.name }} </td>
+                        <td></td>
+                        <td><span class="tag tag-success">Approved</span></td>
+                        <td>
+    			          <a href="#"> <i class="fa fa-edit text-blue"></i> </a>
+    			          <a href="#"> <i class="fa fa-trash text-red"></i> </a>
+    		            </td>
+                      </tr>
+
                 </tbody></table>
               </div>
               <!-- /.card-body -->
@@ -118,7 +122,7 @@
                 this.form.post('api/user');
             }
         },
-        creater() {
+        created() {
             this.loadUsers();
         }
     }
